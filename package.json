@@ -12,6 +12,7 @@
   "dependencies": {
     "@mozilla/readability": "^0.4.2",
     "jsdom": "^19.0.0",
+    "lru-cache": "^7.8.1",
     "node-fetch": "^3.2.3"
   }
 }

@@ -14,4 +14,3 @@ export default function fmtSize(size) {
 
 	return "very big";
 }
-
