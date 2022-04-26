@@ -24,4 +24,3 @@ export default async function parse(url) {
 		.replace(/@size/g,  fmtSize(article.length))
 		.replace(/@body/g,  article.content);
 }
-

@@ -3,11 +3,13 @@ lockfileVersion: 5.3
 specifiers:
   '@mozilla/readability': ^0.4.2
   jsdom: ^19.0.0
+  lru-cache: ^7.8.1
   node-fetch: ^3.2.3
 
 dependencies:
   '@mozilla/readability': 0.4.2
   jsdom: 19.0.0
+  lru-cache: 7.8.1
   node-fetch: 3.2.3
 
 packages:
@@ -279,6 +281,11 @@ packages:
     dependencies:
       prelude-ls: 1.1.2
       type-check: 0.3.2
+    dev: false
+
+  /lru-cache/7.8.1:
+    resolution: {integrity: sha512-E1v547OCgJvbvevfjgK9sNKIVXO96NnsTsFPBlg4ZxjhsJSODoH9lk8Bm0OxvHNm6Vm5Yqkl/1fErDxhYL8Skg==}
+    engines: {node: '>=12'}
     dev: false
 
   /mime-db/1.52.0:
