@@ -1,0 +1,96 @@
+@font-face {
+	font-family: "times"
+	src: url("/assets/fonts/TimesNewerRoman-Regular.otf");
+}
+
+body {
+	background: #fdfdfd;
+	color: #222222;
+	font: 16px/2 "times", serif;
+	margin: 2em auto;
+	max-width: 650px;
+}
+
+input {
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+h1, h2, h3 {
+	margin: 1em 0 4px;
+	line-height: 1.2;
+}
+
+code, pre {
+	font-family: ui-monospace, "Segoe UI Mono", "Source Code Pro",  monospace;
+	line-height: 1.2;
+}
+
+a {
+	color: #4361ee;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin-top: 1em;
+}
+
+ol, ul {
+	list-style-position: inside;
+}
+
+body > ol, body > ul {
+	margin: 1em 0 0;
+	padding: 0;
+}
+
+code, pre {
+	background: #222222;
+	padding: 1px 2px;
+	border-radius: 2px;
+}
+
+pre {
+	padding: 4px;
+	overflow-x: auto;
+}
+
+blockquote {
+	margin: 0;
+	padding-left: 1em;
+	border-left: solid #444444 3px;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 500px;
+	object-fit: scale-down;
+}
+
+figcaption {
+	color: #888;
+}
+
+/* the input looks h, disable dark mode for now */
+/*
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #222;
+		color: #fbfbfb;
+	}
+
+	a {
+		color: #7fdeff;
+	}
+
+	input {
+		border: solid #fbfbfb 2px;
+	}
+}
+*/
