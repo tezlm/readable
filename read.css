@@ -1,12 +1,7 @@
-@font-face {
-	font-family: "times"
-	src: url("/assets/fonts/TimesNewerRoman-Regular.otf");
-}
-
 body {
 	background: #fdfdfd;
 	color: #222222;
-	font: 16px/2 "times", serif;
+	font: 20px/1.6 Georgia, "Times New Roman", serif;
 	padding: 2em;
 	margin: 0 auto;
 	max-width: 650px;
@@ -47,13 +42,14 @@ a:hover {
 code, pre {
 	font-family: ui-monospace, "Segoe UI Mono", "Source Code Pro",  monospace;
 	line-height: 1.2;
-	background: #e3e3e3;
+	background: #eaeaea;
 	padding: 1px 2px;
 	border-radius: 2px;
 }
 
 pre {
-	padding: 4px;
+	padding: 6px;
+	border-radius: 4px;
 	overflow-x: auto;
 }
 
@@ -65,19 +61,26 @@ blockquote {
 
 img {
 	display: block;
-	margin: 0 auto;
-	max-width: 100%;
+	width: 100%;
+	height: auto;
 	max-height: 500px;
 	object-fit: scale-down;
 }
 
+figure {
+	margin: 0 auto;
+	display: table;
+}
+
 figcaption {
 	color: #888;
+	display: table-caption;
+	caption-side: bottom;
 }
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background: #222;
+		background: #1d1d23;
 		color: #fbfbfb;
 	}
 
@@ -86,7 +89,7 @@ figcaption {
 	}
 
 	code, pre {
-		background: #333333;
+		background: #18181e;
 	}
 }
 
