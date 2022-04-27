@@ -7,7 +7,8 @@ body {
 	background: #fdfdfd;
 	color: #222222;
 	font: 16px/2 "times", serif;
-	margin: 2em auto;
+	padding: 2em;
+	margin: 0 auto;
 	max-width: 650px;
 }
 
@@ -19,20 +20,6 @@ input {
 h1, h2, h3 {
 	margin: 1em 0 4px;
 	line-height: 1.2;
-}
-
-code, pre {
-	font-family: ui-monospace, "Segoe UI Mono", "Source Code Pro",  monospace;
-	line-height: 1.2;
-}
-
-a {
-	color: #4361ee;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 p {
@@ -48,8 +35,19 @@ body > ol, body > ul {
 	padding: 0;
 }
 
+a {
+	color: #4361ee;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 code, pre {
-	background: #222222;
+	font-family: ui-monospace, "Segoe UI Mono", "Source Code Pro",  monospace;
+	line-height: 1.2;
+	background: #e3e3e3;
 	padding: 1px 2px;
 	border-radius: 2px;
 }
@@ -62,7 +60,7 @@ pre {
 blockquote {
 	margin: 0;
 	padding-left: 1em;
-	border-left: solid #444444 3px;
+	border-left: solid #888888 3px;
 }
 
 img {
@@ -77,8 +75,6 @@ figcaption {
 	color: #888;
 }
 
-/* the input looks h, disable dark mode for now */
-/*
 @media (prefers-color-scheme: dark) {
 	body {
 		background: #222;
@@ -89,8 +85,8 @@ figcaption {
 		color: #7fdeff;
 	}
 
-	input {
-		border: solid #fbfbfb 2px;
+	code, pre {
+		background: #333333;
 	}
 }
-*/
+
