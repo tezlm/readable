@@ -59,7 +59,7 @@ blockquote {
 	border-left: solid #888888 3px;
 }
 
-img {
+img, video {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -76,6 +76,10 @@ figcaption {
 	color: #888;
 	display: table-caption;
 	caption-side: bottom;
+}
+
+iframe {
+	width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
