@@ -1,11 +1,13 @@
 import { Readability, isProbablyReaderable } from "@mozilla/readability";
 import { JSDOM } from "jsdom";
+import createDOMPurify from 'dompurify';
 import fetch from "node-fetch";
 import fs from "fs";
 import fmtSize from "./size.mjs";
 
 const template = fs.readFileSync("html/article.html", "utf8");
 const error = fs.readFileSync("html/error.html", "utf8");
+const dompurify = createDOMPurify(new JSDOM('').window);
 
 export default async function parse(url) {
 	const content = await fetch(url).then(res => res.text()).catch(() => null);
@@ -22,5 +24,5 @@ export default async function parse(url) {
 		.replace(/@lang/g,  article.lang)
 		.replace(/@title/g, article.title)
 		.replace(/@size/g,  fmtSize(article.length))
-		.replace(/@body/g,  article.content);
+		.replace(/@body/g,  dompurify.sanitize(article.content));
 }
