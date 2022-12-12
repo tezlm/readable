@@ -5,12 +5,15 @@
 		<meta charset="utf8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="color-scheme" content="dark light">
+
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="@url">
+		<meta property="og:title" content="@title">
+		<meta property="og:description" content="@excerpt">
+		
 		<link rel="stylesheet" href="/assets/read.css"></link>
 	</head>
 	<body lang="@lang">
 		<h1>@title</h1>
-		<span style="color: #888; font-size: 0.8em">size: @size - <a href="@url">source</a> - <a href="/read">proxy</a></span>
-		<br />
-		@body
-	</body>
+		<span style="color: #888; font-size: 0.8em">@byline size: @size - <a href="@url">source</a> - <a href="/read">proxy</a></span> <br /> @body </body>
 </html>

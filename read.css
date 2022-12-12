@@ -1,6 +1,6 @@
 body {
 	background: #fdfdfd;
-	color: #222222;
+	color: #333333;
 	font: 20px/1.6 Georgia, "Times New Roman", serif;
 	padding: 2em;
 	margin: 0 auto;
@@ -57,6 +57,7 @@ blockquote {
 	margin: 0;
 	padding-left: 1em;
 	border-left: solid #888888 3px;
+	font-family: italic;
 }
 
 img, video {
