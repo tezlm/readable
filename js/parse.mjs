@@ -6,7 +6,6 @@ import fs from "fs";
 import fmtSize from "./size.mjs";
 
 const template = fs.readFileSync("html/article.html", "utf8");
-const error = fs.readFileSync("html/error.html", "utf8");
 const dompurify = createDOMPurify(new JSDOM('').window);
 
 const headers = {
@@ -19,7 +18,7 @@ export default async function parse(url) {
 	if (content === null) return error;
 
 	const doc = new JSDOM(content, { url });
-	if(!isProbablyReaderable(doc.window.document)) return error;
+	if(!isProbablyReaderable(doc.window.document)) throw "not readerable";
 	
 	const reader = new Readability(doc.window.document);
 	const article = reader.parse();
