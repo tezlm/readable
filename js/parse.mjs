@@ -13,6 +13,14 @@ const headers = {
 	// "User-Agent": "AdsBot-Google (+http://www.google.com/adsbot.html)",
 };
 
+function sanitize(str) {
+	return str
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;")
+}
+
 export default async function parse(url) {
 	const content = await fetch(url, { headers }).then(res => res.text()).catch(() => null);
 	if (content === null) return error;
@@ -24,11 +32,11 @@ export default async function parse(url) {
 	const article = reader.parse();
 	
 	return template
-		.replace(/@lang/g,    article.lang)
-		.replace(/@byline/g,  article.byline ? `by ${article.byline} - `: "")
+		.replace(/@lang/g,    sanitize(article.lang))
+		.replace(/@byline/g,  article.byline ? `by ${sanitize(article.byline)} - `: "")
 		.replace(/@size/g,    fmtSize(article.length))
-		.replace(/@url/g,     url)
-		.replace(/@title/g,   article.title)
-		.replace(/@excerpt/g, article.excerpt)
+		.replace(/@url/g,     sanitize(url))
+		.replace(/@title/g,   sanitize(article.title))
+		.replace(/@excerpt/g, sanitize(article.excerpt))
 		.replace(/@body/g,    dompurify.sanitize(article.content));
 }
